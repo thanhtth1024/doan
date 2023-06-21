@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+    --pink: #e21643;
+}
+body{
+    font-family: var(--sm-font);
+    margin-top: 120px;
+}
+* {
+    box-sizing: border-box;
+}
+/* button */
+.bg-primary{
+    background-color: var(--pink)!important;
+}
+
+.btn:not(.nav-btns button){
+    background-color: white;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
+.btn:not(.nav-btns button):hover{
+    background-color: var(--pink);
+    color: white;
+    border-color: var(--pink);
+}
+
+/* text color */
+.text-primary{
+    color: var(--pink)!important;
+}
+
+/* navbar */
+.navbar{
+    -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+button:hover .sub-menu{
+    visibility: visible;
+}
+ul.sub-menu{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    padding: 10px 5px;
+    visibility: hidden;
+    top: 40px;
+    left: -220px;
+    transition: 0.3s;
+    background-color: #fafafa;
+    font-size: 14px;
+    list-style: none;
+    border: 1px solid rgb(78, 77, 77);
+}
+.sub-menu a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.sub-menu2{
+    position: absolute;
+    left: -290px;
+    top: 40px;
+    visibility: hidden;
+    transition: 0.3s;
+}
+button:hover .sub-menu2{
+    visibility: visible;
+}
+.navbar-brand img{
+    width: 60px;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-link:hover{
+    color: var(--pink)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+/* end navbar */
+.main{
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 10px auto 10px;
+    background-color: #fff;
+    padding-bottom: 20px;
+    line-height: 1.3em;
+}
+.main_product{
+    display: flex;
+    padding: 10px;
+}
+.main_product-img{
+    padding-top: 500px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.main_product-info{
+    margin-left: 5px;
+}
+h1{
+    font-size: 23px;
+    font-weight: bold;
+}
+.stars{
+    color: #ffcc01;
+}
+.price{
+    font-size: 15px;
+}
+h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+.main_product-desc{
+    font-size: 17px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+#soluong{ 
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: rgb(226, 233, 233);
+    display: block;
+}
+#select{
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: rgb(226, 233, 233);
+    display: block;
+}
+.add-to-cart {
+    background: #e7d7d9!important;
+    padding: 8px 20px !important;
+    border: none;
+    text-transform: UPPERCASE;
+    font-weight: 400;
+    color: #333 !important;
+    -webkit-transition: background 0.3s ease; 
+     transition: background 0.3s ease;
+}
+.add-to-cart2 {
+    background: #fd0623!important;
+    padding: 8px 20px !important;
+    border:none;
+    text-transform: UPPERCASE;
+    font-weight: 400;
+    color: #f5f2f2 !important;
+    -webkit-transition: background 0.3s ease; 
+     transition: background 0.3s ease;
+}
+.add-to-cart:hover{
+    background: #eb0927 !important;
+    color: #ffffff !important;
+}
+.span{
+    color: rgb(226, 49, 49);
+    margin-right: 3px;
+}
+.word{
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+}
+.title h2{
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+hr{
+    color: blue;    
+}
+/* special */
+.special-img{
+    cursor: pointer;
+}
+.special-img span{
+    top: 20px;
+    right: 20px;
+}
+.special-img img{
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.special-img:hover img{
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+.text-center span{
+    color: rgb(158, 40, 40);
+}
+.text-capitalize:hover{
+      color: rgb(151, 15, 15);
+}   
+
+  
+/* footer */
+footer .brand{
+    font-family: var(--lg-font);
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+footer a:hover{
+    color: var(--pink)!important;
+}
+
+/* media queries */
+@media(min-width: 62em){
+    .nav-item{
+        border-bottom: none;
+    }
+}

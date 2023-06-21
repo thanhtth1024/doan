@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T&T BOOK STORE</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel = "stylesheet" href = "bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel = "stylesheet" href = "css/main.css">
+</head>
+<body>
+    
+    <!-- navbar -->
+    <nav class = "navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+        <div class = "container">
+            <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
+                <img src = "img/T& T.png" alt= "site icon">
+                <!-- <span class = "text-uppercase fw-lighter ms-2">T&T <br> BOOK STORE</span> -->
+            </a>
+
+            <div class = "order-lg-2 nav-btns">
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-shopping-cart"></i>
+                    <!-- <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">10</span> -->
+                    <ul class="sub-menu">
+                        <li><a href="">Có 0 sản phẩm trong giỏ hàng</a></li>
+                        <hr>
+                    </ul>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-heart"></i>
+                    <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">+99</span>
+                </button>
+                <button type = "button" class = "btn position-relative">
+                    <i class = "fa fa-search px-2"></i>
+                    <ul class="sub-menu2">
+                        <input type="text" placeholder="Tìm kiếm" style="width: 300px; height: 40px;">
+                     </ul>
+                </button>
+            </div>
+
+            <button class = "navbar-toggler border-0" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navMenu">
+                <span class = "navbar-toggler-icon"></span>
+            </button>
+
+            <div class = "collapse navbar-collapse order-lg-1" id = "navMenu">
+                <ul class = "navbar-nav mx-auto text-center">
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#header">Trang chủ</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#collection">Danh mục sách</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#special">Sách mới</a>
+                    </li>
+                     <li class = "nav-item px-2 py-2 border-0">
+                        <a class = "nav-link text-uppercase text-dark" href = "#popular">Sách bán chạy</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#blogs">Blogs</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#about">Giới thiệu</a>
+                    </li>
+                    <li class = "nav-item px-2 py-2">
+                        <a class = "nav-link text-uppercase text-dark" href = "#about">Tài Khoản</a>
+                    </li>
+                 
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+
+    <!-- header -->
+    <header id = "header" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px;">
+        <div class = "container h-100 d-flex align-items-center carousel-inner">
+            <div class = "text-center carousel-item active">
+                <h2 class = "text-capitalize text-white"></h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-black">Từng trang sách là một chuyến phiêu lưu mới</h1>
+                <a href = "#" class = "btn mt-3 text-uppercase">Xem thêm</a>
+            </div>
+            <div class = "text-center carousel-item">
+                <h1 class = "text-capitalize text-black">Sách</h1>
+                <h2 class = "text-uppercase py-2 fw-bold text-black">Bạn đồng hành trung thành trong mọi thời gian</h2>
+                <a href = "#" class = "btn mt-3 text-uppercase">Xem thêm</a>
+            </div>
+        </div>
+
+        <button class = "carousel-control-prev" type = "button" data-bs-target="#header" data-bs-slide = "prev">
+            <span class = "carousel-control-prev-icon"></span>
+        </button>
+        <button class = "carousel-control-next" type = "button" data-bs-target="#header" data-bs-slide = "next">
+            <span class = "carousel-control-next-icon"></span>
+        </button>
+    </header>
+    <!-- end of header -->
+
+    <!-- collection -->
+    <section id = "collection" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center">
+                <h2 class = "position-relative d-inline-block">Danh mục sách</h2>
+            </div>
+
+            <div class = "row g-0">
+                <div class = "d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type = "button" class = "btn m-2 text-dark active-filter-btn" data-filter = "*">Tất cả</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".vanhoc">Sách Văn Học</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".ngoaingu">Sách Ngoại Ngữ</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".kynangsong">Sách Kỹ Năng Sống</button>
+                    <button type = "button" class = "btn m-2 text-dark" data-filter = ".thieunhi">Sách Thiếu Nhi</button>
+                    <button type ="button"  class = "btn m-2 text-dark" data-filter=".truyentranh">Truyện tranh</button>
+                </div>
+       
+                <div class = "collection-list mt-4 row gx-0 gy-3">
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+                        <div class = "collection-img position-relative">
+                          <a href="sanpham.html"> <img src = "img/a82f2d037181afdff690.jpg" class = "w-100"></a> 
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                           <a href="sanpham.html" style="text-decoration: none; color: #333;"> <p class = "text-capitalize my-1" >Thị Trấn Hoa Mười Giờ Tập 2</p></a>
+                            <span class = "fw-bold">70,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/1af29adec65c1802414d.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Thị Trấn Hoa Mười Giờ Tập 1</p>
+                            <span class = "fw-bold">70,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/thi-tran-hoa-muoi-gio-tap-3.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Thị Trấn Hoa Mười Giờ Tập 3</p>
+                            <span class = "fw-bold">70,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/doraemon-bong-chay-truyen-ki-ve-bong-chay-sieu-cap-tap-22.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Doraemon Bóng Chày</p>
+                            <span class = "fw-bold">29,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <a href="yncqnc.html"><img src ="img/yeunguoi.jpg" class = "w-100"></a>
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <a href="yncqnc.html" style="text-decoration: none; color: #333;"> <p class = "text-capitalize my-1">Yêu Người Chưa Quên Người Cũ</p></a>
+                            <span class = "fw-bold">109,500đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <a href="matbiec.html">  <img src = "img/matbiec.jpg" class = "w-100"></a> 
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <a href="matbiec.html" style="text-decoration: none; color: #333;"> <p class = "text-capitalize my-1">Mắt Biếc</p> </a>
+                            <span class = "fw-bold">179,000đ</span>
+                        </div>
+                    </div>
+    <!---------TRUYỆN TRANH------------>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+           <a href="conan98.html" ><img src = "img/truyentranh1.jpg" class = "w-100"></a> 
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <a href="conan98.html" style="text-decoration: none; color: #333;"><p class = "text-capitalize my-1">thám tử lừng danh Conan - 98</p></a>
+            <span class = "fw-bold">21,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh2.jpg" class = "w-100">
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Tấm cám</p>
+            <span class = "fw-bold">19,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh3.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Truyện cổ tích Việt Nam</p>
+            <span class = "fw-bold">25,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh4.jpg" class = "w-100">
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Con cóc là cậu ông giời</p>
+            <span class = "fw-bold">19,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh5.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Xì trum - 10</p>
+            <span class = "fw-bold">29,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh6.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Trạng Quỳnh - 184</p>
+            <span class = "fw-bold">16,999đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh7.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Trạng Quỳnh - 215</p>
+            <span class = "fw-bold">16,999đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh8.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Doraemon - 33</p>
+            <span class = "fw-bold">25,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh9.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Thám tử lừng danh Conan - 80</p>
+            <span class = "fw-bold">35,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh10.jpg" class = "w-100">
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Sự tích trầu cau</p>
+            <span class = "fw-bold">19,000đ</span>
+        </div>
+    </div>
+    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+        <div class = "collection-img position-relative">
+            <img src = "img/truyentranh11.jpg" class = "w-100">
+            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+        </div>
+        <div class = "text-center">
+            <div class = "rating mt-3">
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            </div>
+            <p class = "text-capitalize my-1">Doraemon - 3</p>
+            <span class = "fw-bold">25,000đ</span>
+        </div>
+    </div>
+  <!----------------------------- Văn Học------------------ -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                         <div class = "collection-img position-relative">
+                             <img src = "img/vh1.jpg" class = "w-100">
+                             <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+                    </div>
+                    <div class = "text-center">
+                         <div class = "rating mt-3">
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Thi nhân Việt Nam</p>
+                    <span class = "fw-bold">136,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh3.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Mù khơi</p>
+                    <span class = "fw-bold">97,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh4.jpg" class = "w-100">
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Lã Thị Xuân Thu</p>
+                    <span class = "fw-bold">272,240đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <a href="vonhat.html"><img src="img/vh5.jpg" class = "w-100"></a>
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <a href="vonhat.html" style="text-decoration: none; color: #333;"><p class = "text-capitalize my-1">Vợ Nhặt</p></a>
+                    <span class = "fw-bold">59,999đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh13.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Túp lều bác tom</p>
+                    <span class = "fw-bold">299,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh7.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Tây Du Ký</p>
+                    <span class = "fw-bold">36,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh10.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">hồ xuân hương thơ và đời</p>
+                    <span class = "fw-bold">100,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <a href="truyenkieu.html"> <img src="img/vh11.jpg" class = "w-100"></a>
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">best seller</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <a href="truyenkieu.html" style="text-decoration: none; color: #333;"><p class = "text-capitalize my-1">giới thiệu sách truyện kiều</p> </a>
+                    <span class = "fw-bold">199,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh8.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Làm đĩ</p>
+                    <span class = "fw-bold">49,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh9.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">best seller</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Văn học Việt nam và Nhật Bản</p>
+                    <span class = "fw-bold">339,500đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh12.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Tôi thấy hoa vàng trên cỏ xanh</p>
+                    <span class = "fw-bold">100,000đ</span>
+                </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 vanhoc">
+                <div class = "collection-img position-relative">
+                    <img src = "img/vh15.jpg" class = "w-100">
+                </div>
+                <div class = "text-center">
+                    <div class = "rating mt-3">
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                    </div>
+                    <p class = "text-capitalize my-1">Những trang văn màu lính</p>
+                    <span class = "fw-bold">60,000đ</span>
+                </div>
+            </div>
+
+  <!----------------------------- Ngoại Ngữ------------------ -->
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+                 <div class = "collection-img position-relative">
+                 <img src = "img/ngoaingu11.jpg" class = "w-100">
+                <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+            </div>
+            <div class = "text-center">
+                <div class = "rating mt-3">
+                 <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                 <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                 <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                 <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                 <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                </div>
+            <p class = "text-capitalize my-1">Tập viết tiếng hàn</p>
+            <span class = "fw-bold">139,999đ</span>
+            </div>
+            </div>
+            <div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+                <div class = "collection-img position-relative">
+                    <img src = "img/ngoaingu2.jpg" class = "w-100">
+                    <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+           </div>
+           <div class = "text-center">
+                <div class = "rating mt-3">
+                   <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                   <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                   <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                   <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                   <span class = "text-primary"><i class = "fas fa-star"></i></span>
+           </div>
+           <p class = "text-capitalize my-1">Tự học viết tiếng nhật căn bản</p>
+           <span class = "fw-bold">139,999đ</span>
+       </div>
+   </div>
+   <div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu3.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">600 động từ bất quy tắc</p>
+<span class = "fw-bold">150,000đ</span>
+</div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu4.jpg" class = "w-100">
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">ngữ pháp tiếng anh</p>
+<span class = "fw-bold">100,000đ</span>
+</div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu5.jpg" class = "w-100">
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">Tiếng trung cho người du lịch</p>
+<span class = "fw-bold">166,000đ</span>
+</div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu7.jpg" class = "w-100">
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">Tiếng hàn tổng hợp - SBT</p>
+<span class = "fw-bold">136,000đ</span>
+</div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu8.jpg" class = "w-100">
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">Tiếng hàn tổng hợp - sơ cấp 1</p>
+<span class = "fw-bold">136,000đ</span>
+</div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 ngoaingu">
+    <div class = "collection-img position-relative">
+        <img src = "img/ngoaingu44.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+</div>
+<div class = "text-center">
+    <div class = "rating mt-3">
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+       <span class = "text-primary"><i class = "fas fa-star"></i></span>
+</div>
+<p class = "text-capitalize my-1">HSK 3</p>
+<span class = "fw-bold">120,000đ</span>
+</div>
+</div>
+
+
+<!-- KỸ NĂNG SỐNG-->
+
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong1.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">tư duy tích cực</p>
+        <span class = "fw-bold">136,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong2.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">EQ - IQ</p>
+        <span class = "fw-bold">129.000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong3.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">khéo ăn nói sẽ có được thiên hạ</p>
+        <span class = "fw-bold">159,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong4.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">kỹ năng sống dành cho HS</p>
+        <span class = "fw-bold">99,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong5.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">kỹ năng sống lớp mầm</p>
+        <span class = "fw-bold">99,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong6.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">mở cửa tương lai</p>
+        <span class = "fw-bold">119,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong7.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">Rèn luyện tâm trí</p>
+        <span class = "fw-bold">139,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+       <a href="cmldsltt.html"><img src = "img/kynangsong8.jpg" class = "w-100"></a> 
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-20%</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <a href="cmldsltt.html" style="text-decoration: none; color: #333;"><p class = "text-capitalize my-1">Chưa một lần đau sao là tuổi trẻ</p></a>
+        <span class = "fw-bold">92,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong9.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">rèn luyện kĩ năng sống (3-4 tuổi)</p>
+        <span class = "fw-bold">99,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong10.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">hot</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">đừng lựa chọn an nhàn khi còn trẻ</p>
+        <span class = "fw-bold">149,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong11.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">100 cách xử lý tình huống nguy cấp</p>
+        <span class = "fw-bold">110,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 kynangsong">
+    <div class = "collection-img position-relative">
+        <img src = "img/kynangsong12.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">Kỹ năng giao tiếp</p>
+        <span class = "fw-bold">110,000đ</span>
+    </div>
+</div>
+
+<!----------------THIẾU NHI-------------->
+
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+        <img src = "img/thieunhi1.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">Bộ sách đồ chơi</p>
+        <span class = "fw-bold">170,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+        <img src = "img/thieunhi2.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">khu rừng tưng bừng</p>
+        <span class = "fw-bold">29,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+        <img src = "img/thieunhi3.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-15%</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">Nhiệm vụ bảo vệ khí hậu</p>
+        <span class = "fw-bold">50,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+      <a href="ctbonc.html"> <img src = "img/thieunhi4.jpg" class = "w-100"> </a>   
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">-10%</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <a href="ctbonc.html" style="text-decoration: none; color: #333;"> <p class = "text-capitalize my-1">Con thích bố ở nhà cơ</p> </a> 
+        <span class = "fw-bold">40,500đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+        <img src = "img/thieunhi5.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">thơ hay cho bé</p>
+        <span class = "fw-bold">21,000đ</span>
+    </div>
+</div>
+<div class = "col-md-6 col-lg-4 col-xl-3 p-2 thieunhi">
+    <div class = "collection-img position-relative">
+        <img src = "img/thieunhi6.jpg" class = "w-100">
+        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+    </div>
+    <div class = "text-center">
+        <div class = "rating mt-3">
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+        </div>
+        <p class = "text-capitalize my-1">Dán hình nhận biết động vật</p>
+        <span class = "fw-bold">49,000đ</span>
+    </div>
+</div>
+
+
+  <!----------------------------- FEAT------------------ -->
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/chavacon.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Cha Và Con</p>
+                            <span class = "fw-bold">136,000đ</span>
+                        </div>
+                    </div>
+
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/trenduongbang.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Trên Đường Băng</p>
+                            <span class = "fw-bold">68,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/sanduoi.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Săn Đuổi</p>
+                            <span class = "fw-bold">99,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/nhungduaconcuasoi.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Những Đứa Con Của Sói</p>
+                            <span class = "fw-bold">79,000đ</span>
+                        </div>
+                    </div>
+
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 truyentranh">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/hoantube.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Hoàng Tử Bé</p>
+                            <span class = "fw-bold">59,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class = "collection-img position-relative">
+                            <img src = "img/tamquoc.jpg" class = "w-100">
+                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                        </div>
+                        <div class = "text-center">
+                            <div class = "rating mt-3">
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            </div>
+                            <p class = "text-capitalize my-1">Tam @ Quốc</p>
+                            <span class = "fw-bold">199,000đ</span>
+                        </div>
+                    </div>
+        <!--------------------- NEW ------------------------>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                    <div class = "collection-img position-relative">
+                        <img src = "img/duhanh.jpg" class = "w-100">
+                        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
+                    </div>
+                    <div class = "text-center">
+                        <div class = "rating mt-3">
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Du Hành vào Thế Giới Y Học Tự Cổ Chí Kim</p>
+                        <span class = "fw-bold">122,000đ</span>
+                    </div>
+                </div>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                    <div class = "collection-img position-relative">
+                        <img src = "img/tudien.jpg" class = "w-100">
+                        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                    </div>
+                    <div class = "text-center">
+                        <div class = "rating mt-3">
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Từ Điển Thông Dụng Nhật-Việt-Anh </p>
+                        <span class = "fw-bold">314,500đ</span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                    <div class = "collection-img position-relative">
+                        <img src = "img/hanhtranglaptrinh.jpg" class = "w-100">
+                        <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">new</span>
+                    </div>
+                    <div class = "text-center">
+                        <div class = "rating mt-3">
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                            <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Hành Trang Lập Trình</p>
+                        <span class = "fw-bold">152,000đ</span>
+                    </div>
+                </div>
+                     </div>
+                    </div>
+                </div>
+    </section>
+            <!-- end of collection -->
+
+            <!-- special products -->
+    <section id = "special" class = "py-3">
+        <div class = "container">
+            <div class = "title text-center py-5 pt-1">
+                <h2 class = "position-relative d-inline-block">Sách Mới</h2>
+            </div>
+
+            <div class = "special-list row g-0 pb-3">
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/banhangcamxuc.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Bán Hàng Cảm Xúc</p>
+                        <span class = "fw-bold d-block">269,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/bocphottaichinh.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Bóc Phốt Tài Chính</p>
+                        <span class = "fw-bold d-block">179,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                      <a href="haisophan.html"><img src = "img/haisophan.jpg" class = "w-100"></a>  
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <a href="haisophan.html" style="text-decoration: none; color: #333;"> <p class = "text-capitalize mt-3 mb-1">Hai Số Phận </p> </a>
+                        <span class = "fw-bold d-block">139,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/luocsuthegioi.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Lược Sử Thế Giới</p>
+                        <span class = "fw-bold d-block">289,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/thanthoaihylap.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Thần Thoại Hy Lạp</p>
+                        <span class = "fw-bold d-block">169,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/bankhongchisong1lan.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Bạn Không Chỉ Sống Một Lần</p>
+                        <span class = "fw-bold d-block">83,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/kpop.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">K-Pop </p>
+                        <span class = "fw-bold d-block">132,500đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/kithuatvesondau.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Kĩ Thuật Vẽ Sơn Dầu</p>
+                        <span class = "fw-bold d-block">552,500đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/tomtatkienthucstoanphothong.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Tóm Tắt Kiến Thức Toán</p>
+                        <span class = "fw-bold d-block">145,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/ngamchuyenngayxua.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Ngẫm Chuyện Xưa Nay </p>
+                        <span class = "fw-bold d-block">100,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/hocvienkientrucsu.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Học Viện Kiến Trúc Sư</p>
+                        <span class = "fw-bold d-block">76,500đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class = "special-img position-relative overflow-hidden">
+                        <img src = "img/paovanhungnguoiban.jpg" class = "w-100">
+                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                            <i class = "fas fa-heart"></i>
+                        </span>
+                    </div>
+                    <div class = "text-center">
+                        <p class = "text-capitalize mt-3 mb-1">Pao và Những Người Bạn</p>
+                        <span class = "fw-bold d-block">24,000đ</span>
+                        <a href = "#" class = "btn btn-primary mt-3">Thêm vào giỏ</a>
+                    </div>
+                </div>
+    </div>
+</div>
+</section>
+
+    <!-- end of special products -->
+
+    <!-- popular -->
+    <section id = "popular" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center pt-3 pb-5">
+                <h2 class = "position-relative d-inline-block ms-4">Sách Bán Chạy</h2>
+            </div>
+
+            <div class = "row">
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">Tốt nhất</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/onggiavabienca.png" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Ông Già Và Biển Cả</p>
+                            <span>45,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/tuoitredanggiabaonhieu.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Tuổi Trẻ Đáng Giá Bao Nhiêu</p>
+                            <span>79,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/cuocsongdechgiongcuocdoi.png" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Cuộc Sống Đếch Giống Cuộc Đời</p>
+                            <span>99,000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">Bán chạy nhất</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/nha-gia-kim.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Nhà Giả Kim</p>
+                            <span>199,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/doi-ngan-dung-ngu-dai.jpeg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Đời Ngắn Đừng Ngủ Dài</p>
+                            <span>100,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/harypotter.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Harry Potter</p>
+                            <span>120,000đ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-4 row g-3">
+                    <h3 class = "fs-5">Đang giảm giá</h3>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/dacnhantam.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Đắc Nhân Tâm</p>
+                            <span>200,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/toiacvahinhphat.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Tội Ác Và Hình Phạt</p>
+                            <span>150,000đ</span>
+                        </div>
+                    </div>
+                    <div class = "d-flex align-items-start justify-content-start">
+                        <img src = "img/dungluachonannhankhicontre.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                        <div>
+                            <p class = "mb-0">Đừng Lựa Chọn An Nhàn Khi Còn Trẻ</p>
+                            <span>137,500đ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of popular -->
+
+    <!-- blogs -->
+    <section id = "offers" class = "py-5">
+        <div class = "container">
+            <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+                <div class = "offers-content">
+                    
+                    
+                    <a href = "#" class = "btn">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- end of blogs -->
+
+    <!-- blogs -->
+    <section id = "blogs" class = "py-5">
+        <div class = "container">
+            <div class = "title text-center py-5">
+                <h2 class = "position-relative d-inline-block">Blog</h2>
+            </div>
+
+            <div class = "row g-3">
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "img/blog1.jpg" alt = "" style=" height: 350px;">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">
+                            Combo Lucky Luke - Bộ 4 Tập</h4>
+                       
+                        <p class = "card-text mt-3 text-muted">Nhân vật trung tâm của loạt truyện là Lucky Luke - chàng cao bồi không bao giờ biết sợ, luôn khoác chiếc áo ghi-lê đen, sơ mi vàng và cổ đeo chiếc khăn màu đỏ, làm bạn...</p>
+                        <a href = "#" class = "btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "img/blog2.jpg" alt = "" style=" height: 350px;">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">
+                            Bách Khoa Toàn Thư Content</h4>
+                       
+                        <p class = "card-text mt-3 text-muted">Bạn thân mến, Bạn đang sống trong một thời đại mà khi khép mắt vào, điều còn đọng lại trong đầu bạn có khi không phải là những lời thì thầm chúc ngủ ngon, mà là lời lẽ mời... </p>
+                        <a href = "#" class = "btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                    <img src = "img/blog3.jpg" alt = "" style=" height: 350px;">
+                    <div class = "card-body px-0">
+                        <h4 class = "card-title">Tạp chí Forbes - Số 115</h4>
+                       
+                        <p class = "card-text mt-3 text-muted">Điểm Chạm Khách Hàng Để trả lời cho câu hỏi sau đại dịch COVID-19 chân dung của người tiêu dùng đã thay đổi như thế nào, NielsenIQ đã tiến hành nhiều khảo sát...</p>
+                       
+                        <a href = "#" class = "btn">Đọc ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+   
+
+    
+
+     <!-- about us -->
+     <section id = "about" class = "py-5">
+        <div class = "container">
+            <div class = "row gy-lg-5 align-items-center">
+                <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+                    <div class = "title pt-3 pb-3">
+                        <h2 class = "position-relative d-inline-block ms-4">Giới Thiệu</h2>
+                    </div>
+                    <p class = "lead text-muted">Chào mừng bạn đến với T&T BOOK STORE - điểm đến cho những người yêu sách và đam mê tri thức.</p>
+                    <p> * Chúng tôi luôn đặt chất lượng sách lên hàng đầu. Tất cả các cuốn sách trong cửa hàng đều được chọn lọc kỹ càng.</p>
+                    <p> * Đội ngũ nhân viên của chúng tôi luôn sẵn sàng hỗ trợ bạn trong việc chọn sách phù hợp. </p>
+                 
+                    <p> * Hãy ghé thăm T&T BOOK STORE của chúng tôi để khám phá vô vàn tri thức và tưởng tượng mới. Đăng ký nhận bản tin của chúng tôi để không bỏ lỡ bất kỳ ưu đãi, khuyến mãi hay thông tin mới nào. </p>
+                </div>
+                <div class = "col-lg-6 order-lg-0">
+                    <img src = "img/store.png" alt = "" class = "img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of about us -->
+
+    <!-- newsletter -->
+    <section id = "newsletter" class = "py-5">
+        <div class = "container">
+            <div class = "d-flex flex-column align-items-center justify-content-center">
+                <div class = "title text-center pt-3 pb-5">
+                    <h2 class = "position-relative d-inline-block ms-4">Đăng ký thông tin</h2>
+                </div>
+
+                <p class = "text-center text-muted">Đăng ký nhận email khuyến mãi</p>
+                <div class = "input-group mb-3 mt-3">
+                    <input type = "text" class = "form-control" placeholder="Email của bạn">
+                    <button class = "btn btn-primary" type = "submit">ĐĂNG KÝ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of newsletter -->
+
+    <!-- footer -->
+    <footer class = "bg-dark py-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">T&T BOOK STORE</a>
+                    <p class = "text-white text-muted mt-3">Nơi tạo nên những câu chuyện đặc biệt trong trí tưởng tượng của bạn.</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-2">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Trang chủ
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Danh mục sách
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Blogs
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "#" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Giới thiệu
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-4">
+                    <h5 class = "fw-light mb-3">Thông tin liên hệ</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Quận Ngũ Hành Sơn, Thành Phố Đà Nẵng, Việt Nam
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            www.t&tbookstore.com.vn
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            +84 286 776 236
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Theo dõi chúng tôi</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-pinterest"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+
+
+
+    <!-- jquery -->
+    <script src = "js/jquery-3.6.0.js"></script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <!-- bootstrap js -->
+    <script src = "bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src = "js/script.js"></script>
+</body>
+</html>

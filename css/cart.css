@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap');
+
+:root{
+    --lg-font: 'Kaisei Tokumin', serif;
+    --sm-font: 'Poppins', sans-serif;
+   
+}
+body{
+    font-family: var(--sm-font);
+}
+
+/* navbar */
+.navbar{
+    -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+button:hover .sub-menu{
+    visibility: visible;
+}
+ul.sub-menu{
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    padding: 10px 5px;
+    visibility: hidden;
+    top: 40px;
+    left: -220px;
+    transition: 0.3s;
+    background-color: #fafafa;
+    font-size: 14px;
+    list-style: none;
+    border: 1px solid rgb(78, 77, 77);
+}
+.sub-menu a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.sub-menu2{
+    position: absolute;
+    left: -290px;
+    top: 40px;
+    visibility: hidden;
+    transition: 0.3s;
+}
+button:hover .sub-menu2{
+    visibility: visible;
+}
+.navbar-brand img{
+    width: 60px;
+}
+.navbar-brand span{
+    letter-spacing: 2px;
+    font-family: var(--lg-font);
+}
+.nav-link:hover{
+    color: var(--pink)!important;
+}
+.nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+
+/* footer */
+footer .brand{
+    font-family: var(--lg-font);
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+footer a:hover{
+    color: var(--pink)!important;
+}
+
+/* media queries */
+@media(min-width: 992px){
+    .nav-item{
+        border-bottom: none;
+    }
+}
